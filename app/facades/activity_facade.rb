@@ -13,7 +13,7 @@ class ActivityFacade
         end
         activity_data_temp = BoredService.get_activity(type)
         activity_data = BoredService.get_activity('relaxation')
-        # Activities.new(q_destination,activity_data, activity_data_temp, forecast_data)
+        Activities.new(q_destination, activity_data,forecast_data, activity_data_temp)
     end
   end
 end

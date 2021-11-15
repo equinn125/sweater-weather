@@ -1,9 +1,10 @@
 class Activities
-  def initialize(activity_data,activity_data_temp, q_destination, forecast_data)
+  attr_reader :id, :destination, :forecast, :activites
+  def initialize (q_destination, activity_data,forecast_data, activity_data_temp)
     @id = nil
-    @destination = q_destination
     @forecast = DestinationForecast.new(forecast_data)
-    @activites =
+    @activites = [ActivityInfo.new(activity_data), ActivityInfo.new(activity_data_temp)]
+    @destination = q_destination
   end
 end
 
