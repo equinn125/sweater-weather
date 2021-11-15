@@ -37,7 +37,7 @@ describe Activities do
   q_destination = 'denver,co'
   activites = Activities.new(q_destination, activity_data, forecast_data, activity_data_temp)
   expect(activites).to be_a(Activities)
-  expect(activites.activites).to be_an(Array)
+  expect(activites.activities).to be_an(Array)
   expect(activites.destination).to eq('denver,co')
   expect(activites.forecast).to be_an(DestinationForecast)
   end

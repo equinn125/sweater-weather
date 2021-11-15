@@ -1,4 +1,4 @@
 class ActivitiesSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :destination, :forecast, :activites
+  attributes :destination, :forecast, :activities
 end
