@@ -1,9 +1,2 @@
-class Activities
-  attr_reader :title, :type, :participants, :price
-  def initialize(data)
-    @title = data[:activity]
-    @type = data[:type]
-    @participants = data[:participants]
-    @price = data[:price]
-  end
-end
+#want to put all info here destination,
+#forecast, activities
