@@ -15,14 +15,20 @@ describe 'activity request' do
     expect(activites[:data][:attributes][:destination]).to be_a(String)
     expect(activites[:data][:attributes]).to have_key(:forecast)
     expect(activites[:data][:attributes][:forecast]).to have_key(:summary)
+    expect(activites[:data][:attributes][:forecast][:summary]).to be_a(String)
     expect(activites[:data][:attributes][:forecast]).to have_key(:temperature)
+    expect(activites[:data][:attributes][:forecast][:temperature]).to be_a(String)
 
     expect(activites[:data][:attributes]).to have_key(:activities)
     expect(activites[:data][:attributes][:activities]).to be_an(Array)
     expect(activites[:data][:attributes][:activities].first).to have_key(:title)
+    expect(activites[:data][:attributes][:activities].first[:title]).to be_a(String)
     expect(activites[:data][:attributes][:activities].first).to have_key(:type)
+    expect(activites[:data][:attributes][:activities].first[:type]).to be_a(String)
     expect(activites[:data][:attributes][:activities].first).to have_key(:participants)
+    expect(activites[:data][:attributes][:activities].first[:participants]).to be_a(Integer)
     expect(activites[:data][:attributes][:activities].first).to have_key(:price)
+
   end
   it 'has a sad path' do
       get '/api/v1/activities?destination='
