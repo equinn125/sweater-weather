@@ -1,3 +1,6 @@
 class DestinationForecast
+  def initialize(data)
+    @summary = data[]
+    @temp= data[]
+  end
 end
-#put temp and summary here

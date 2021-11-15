@@ -1,6 +1,6 @@
 class ActivityFacade
   class << self
-    def get_activities(lat,long)
+    def get_activities(lat,long, q_destination)
       forecast_data = WeatherService.get_weather(lat,long)[:current]
       if forecast_data[:temp] >= 60
         type = 'recreational'
@@ -8,9 +8,12 @@ class ActivityFacade
         type = 'busywork'
       elsif forecast_data[:temp] < 50
           type = 'cooking'
+        else
+
         end
-        activity_data = BoredService.get_activity(type)
-        binding.pry
+        activity_data_temp = BoredService.get_activity(type)
+        activity_data = BoredService.get_activity('relaxation')
+        # Activities.new(q_destination,activity_data, activity_data_temp, forecast_data)
     end
   end
 end
