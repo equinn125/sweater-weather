@@ -15,7 +15,7 @@ describe 'activity request' do
     expect(activites[:data][:attributes][:destination]).to be_a(String)
     expect(activites[:data][:attributes]).to have_key(:forecast)
     expect(activites[:data][:attributes][:forecast]).to have_key(:summary)
-    expect(activites[:data][:attributes][:forecast]).to have_key(:temp)
+    expect(activites[:data][:attributes][:forecast]).to have_key(:temperature)
 
     expect(activites[:data][:attributes]).to have_key(:activities)
     expect(activites[:data][:attributes][:activities]).to be_an(Array)

@@ -1,7 +1,7 @@
 class DestinationForecast
-  attr_reader :summary, :temp
+  attr_reader :summary, :temperature
   def initialize(forecast_data)
     @summary = forecast_data[:weather][0][:description]
-    @temp= forecast_data[:temp]
+    @temperature = "#{forecast_data[:temp]}F"
   end
 end

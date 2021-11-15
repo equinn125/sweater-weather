@@ -21,6 +21,6 @@ describe DestinationForecast do
      forecast = DestinationForecast.new(data)
      expect(forecast).to be_a(DestinationForecast)
      expect(forecast.summary).to eq("clear sky")
-    expect(forecast.temp).to eq(68.47)
+    expect(forecast.temperature).to eq("68.47F")
   end
 end
