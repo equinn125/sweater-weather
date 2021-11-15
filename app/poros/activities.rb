@@ -1,4 +1,4 @@
-class Activity
+class Activities
   attr_reader :title, :type, :participants, :price
   def initialize(data)
     @title = data[:activity]

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get 'forecast', to: 'forecast#show'
       get 'backgrounds', to: 'backgrounds#index'
+      get 'activities', to: 'activities#index'
     end
   end
 end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Activity do
+describe Activities do
   it 'has attributes' do
     data = {
     "activity": "Go to a karaoke bar with some friends",
@@ -11,7 +11,7 @@ describe Activity do
     "key": "9072906",
     "accessibility": 0.35
     }
-    activity = Activity.new(data)
+    activity = Activities.new(data)
     expect(activity.title).to eq("Go to a karaoke bar with some friends")
     expect(activity.type).to eq("social")
     expect(activity.participants).to eq(4)
