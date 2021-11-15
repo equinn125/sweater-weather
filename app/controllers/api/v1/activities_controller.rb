@@ -1,7 +1,8 @@
-class ActivitiesController< ApplicationController
+class Api::V1::ActivitiesController< ApplicationController
   def index
-    coord_data = LoctionFacade.coords(params[:destination])
-    
+    coord_data = LocationFacade.coords(params[:destination])
+    activities = ActivityFacade.get_activities(coord_data.latitude, coord_data.longitude, params[:destination])
+    render json:ActivitiesSerializer.new(activities)
   end
 end
 #first need to input location('destination') as a param
