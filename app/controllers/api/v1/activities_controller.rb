@@ -1,8 +1,12 @@
 class Api::V1::ActivitiesController< ApplicationController
   def index
+    if !params[:destination].empty?
     coord_data = LocationFacade.coords(params[:destination])
     activities = ActivityFacade.get_activities(coord_data.latitude, coord_data.longitude, params[:destination])
     render json:ActivitiesSerializer.new(activities)
+  else
+    render json:  '{"error": "not_found"}', status: 404
+    end
   end
 end
 #first need to input location('destination') as a param

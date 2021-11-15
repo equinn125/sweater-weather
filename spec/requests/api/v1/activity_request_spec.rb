@@ -23,6 +23,9 @@ describe 'activity request' do
     expect(activites[:data][:attributes][:activities].first).to have_key(:type)
     expect(activites[:data][:attributes][:activities].first).to have_key(:participants)
     expect(activites[:data][:attributes][:activities].first).to have_key(:price)
-
+  end
+  it 'has a sad path' do
+      get '/api/v1/activities?destination='
+      expect(response.status).to eq(404)
   end
 end
