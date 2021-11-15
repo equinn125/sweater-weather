@@ -9,6 +9,20 @@ describe 'activity request' do
     expect(activites).to be_a(Hash)
     expect(activites[:data][:id]).to eq(nil)
     expect(activites[:data][:type]).to eq('activities')
+
     expect(activites[:data]).to have_key(:attributes)
+    expect(activites[:data][:attributes]).to have_key(:destination)
+    expect(activites[:data][:attributes][:destination]).to be_a(String)
+    expect(activites[:data][:attributes]).to have_key(:forecast)
+    expect(activites[:data][:attributes][:forecast]).to have_key(:summary)
+    expect(activites[:data][:attributes][:forecast]).to have_key(:temp)
+
+    expect(activites[:data][:attributes]).to have_key(:activities)
+    expect(activites[:data][:attributes][:activities]).to be_an(Array)
+    expect(activites[:data][:attributes][:activities].first).to have_key(:title)
+    expect(activites[:data][:attributes][:activities].first).to have_key(:type)
+    expect(activites[:data][:attributes][:activities].first).to have_key(:participants)
+    expect(activites[:data][:attributes][:activities].first).to have_key(:price)
+
   end
 end
