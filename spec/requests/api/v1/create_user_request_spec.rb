@@ -11,7 +11,7 @@ describe 'the user create endpoint' do
       user = JSON.parse(response.body, symbolize_names: true)
       expect(user).to be_a(Hash)
       expect(user[:data][:id]).to be_a(String)
-      expect(user[:data][:type]).to eq("user")
+      expect(user[:data][:type]).to eq("users")
       expect(user[:data]).to have_key(:attributes)
       expect(user[:data][:attributes]).to have_key(:email)
       expect(user[:data][:attributes]).to have_key(:api_key)

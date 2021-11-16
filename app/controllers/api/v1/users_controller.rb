@@ -10,8 +10,7 @@ class Api::V1::UsersController<ApplicationController
      render json:  {"error": "bad_request"}, status: 400
    elsif new_user.save
      session[:user_id] = new_user.id
-    new_user.generate_key
-    render json: UserSerializer.new(new_user), status: 201
+    render json: UsersSerializer.new(new_user), status: 201
    else
      render json:  {"error": "bad_request"}, status: 400
    end
