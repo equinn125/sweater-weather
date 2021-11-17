@@ -83,7 +83,8 @@
 <p>Request: `GET /api/v1/forecast?location=denver,co`</p>
 
 <p>Response</p>
-`{
+```
+{
   "data": {
     "id": null,
     "type": "forecast",
@@ -111,7 +112,7 @@
       ]
     }
   }
-}`
-
+}
+```
 
 
