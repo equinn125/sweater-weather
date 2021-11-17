@@ -81,7 +81,7 @@
 ### API Endpoints
 
 <details>
-  <summary>Get all hazards</summary>
+  <summary>Forecast</summary>
   
   * Method: GET
  
@@ -122,4 +122,29 @@
 ```
 </details>
 
+<details>
+  <summary>Background</summary>
+  
+  * Method: GET
+ 
+  * Endpoint: /api/v1/backgrounds?location=denver,co
+  
+ 
+```
+{
+    "data": {
+        "id": null,
+        "type": "image",
+        "attributes": {
+            "description": "8pm curfew was lifted.",
+            "image_url": "https://images.unsplash.com/photo-1634507307973-9df1b23f5701?crop=entropy&cs=srgb&fm=jpg&ixid=MnwyNzU2NDJ8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjb3xlbnwwfDB8fHwxNjM3MTE5NjQy&ixlib=rb-1.2.1&q=85",
+            "site": "www.unsplash.com",
+            "photographer": "Dillon Wanner",
+            "photographer_site": "https://unsplash.com/@dillydallying"
+        }
+    }
+}
 
+
+```
+</details>
