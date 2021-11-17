@@ -1,6 +1,6 @@
 class Api::V1::UsersController<ApplicationController
   def create
-   # user[:email] = user[:email].downcase
+   
    new_user = User.new(user_params)
    if params[:email].nil? || params[:password].nil? || params[:password_confirmation].nil?
      render json:  {"error": "missing_field"}, status: 400

@@ -10,6 +10,7 @@ describe 'roadtrip request endpoint' do
     }
     post '/api/v1/road_trip', params: body
     expect(response).to be_successful
+    expect(response.status).to eq(200)
 
     trip = JSON.parse(response.body, symbolize_names: true)
     expect(trip).to have_key(:data)
@@ -63,6 +64,7 @@ describe 'roadtrip request endpoint' do
       }
       post '/api/v1/road_trip', params: body
       expect(response).to be_successful
+      expect(response.status).to eq(200)
 
       trip = JSON.parse(response.body, symbolize_names: true)
       expect(trip).to have_key(:data)

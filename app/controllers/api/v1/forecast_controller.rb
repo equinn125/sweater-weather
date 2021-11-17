@@ -5,7 +5,7 @@ class Api::V1::ForecastController < ApplicationController
     forecast = WeatherFacade.get_forecast(location.latitude, location.longitude)
     render json: ForecastSerializer.new(forecast).serializable_hash, status: 200
   else
-    render json:  '{"error": "not_found"}', status: 404
+    render json:  {"error": "not_found"}, status: 404
     end
   end
 end
