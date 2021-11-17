@@ -21,8 +21,7 @@ describe 'the user create endpoint' do
 
   it 'has a sad path for missing field', :vcr do
     body = {"email": "test@test.com",
-      "password": "Password123",
-      "password_confirmation": " "}
+      "password": "Password123"}
     post '/api/v1/users', params: body
     expect(response.status).to eq(400)
   end

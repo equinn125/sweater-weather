@@ -5,4 +5,9 @@ describe WeatherFacade do
     weather = WeatherFacade.get_forecast('39.738453', '-104.984853')
     expect(weather).to be_a(Forecast)
   end
+
+  it 'returns the weather for an eta', :vcr do
+    forecast = WeatherFacade.get_destination_weather('39.738453', '-104.984853', "05:54:27")
+    expect(forecast).to be_a(EtaForecast)
+  end
 end
