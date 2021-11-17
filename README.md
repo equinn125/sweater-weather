@@ -78,13 +78,18 @@
 6. Input API keys into the `application.yml` file: `map_key: your mapquest api key here, weather_key: your openweather api key here, unsplash_key: your unsplash api key here`
 - ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-### Endpoints
-## Get weather for a city
-<p>Request: `GET /api/v1/forecast?location=denver,co`</p>
+### API Endpoints
 
-<p>Response</p>
+<details>
+  <summary>Get all hazards</summary>
+  
+  * Method: GET
+ 
+  * Endpoint: api/v1/forecast?location=denver
+  
+ 
 ```
-{
+ {
   "data": {
     "id": null,
     "type": "forecast",
@@ -113,6 +118,8 @@
     }
   }
 }
+
 ```
+</details>
 
 
