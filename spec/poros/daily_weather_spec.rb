@@ -43,11 +43,16 @@ describe DailyWeather do
     }
     weather = DailyWeather.new(data)
     expect(weather.date).to eq('2021-11-13')
+    expect(weather.date).to be_a(String)
     expect(weather.sunrise).to eq('2021-11-13 06:42:42 -0700')
     expect(weather.sunset).to eq('2021-11-13 16:46:03 -0700')
     expect(weather.max_temp).to eq(63.81)
+    expect(weather.max_temp).to be_a(Float)
     expect(weather.min_temp).to eq(46.99)
+    expect(weather.min_temp).to be_a(Float)
     expect(weather.conditions).to eq("overcast clouds")
+    expect(weather.conditions).to be_a(String)
     expect(weather.icon).to eq("04d")
+    expect(weather.icon).to be_a(String)
   end
 end

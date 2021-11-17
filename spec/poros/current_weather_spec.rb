@@ -29,13 +29,18 @@ describe Location do
     weather = CurrentWeather.new(data)
     expect(weather.datetime).to eq('2021-11-13 17:37:46 -0700')
     expect(weather.temp).to eq(58.46)
+    expect(weather.temp).to be_a(Float)
     expect(weather.sunrise).to eq('2021-11-13 06:42:42 -0700')
     expect(weather.sunset).to eq('2021-11-13 16:46:03 -0700')
     expect(weather.feels_like).to eq(55.42)
+    expect(weather.feels_like).to be_a(Float)
     expect(weather.humidity).to eq(30)
     expect(weather.uvi).to eq(0)
     expect(weather.visibility).to eq(10000)
+    expect(weather.visibility).to be_a(Integer)
     expect(weather.conditions).to eq("clear sky")
+    expect(weather.conditions).to be_a(String)
     expect(weather.icon).to eq("01n")
+    expect(weather.icon).to be_a(String)
   end
 end

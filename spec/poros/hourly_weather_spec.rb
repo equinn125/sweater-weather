@@ -27,8 +27,12 @@ describe HourlyWeather do
     }
     weather = HourlyWeather.new(data)
     expect(weather.time).to eq('05:11 PM')
+    expect(weather.time).to be_a(String)
     expect(weather.temp).to eq(58.5)
+    expect(weather.temp).to be_a(Float)
     expect(weather.conditions).to eq("few clouds")
+    expect(weather.conditions).to be_a(String)
     expect(weather.icon).to eq("02n")
+    expect(weather.icon).to be_a(String)
   end
 end

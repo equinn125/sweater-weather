@@ -12,10 +12,15 @@ describe 'background request endpoint' do
     expect(background[:data][:type]).to eq('image')
     expect(background[:data]).to have_key(:attributes)
     expect(background[:data][:attributes]).to have_key(:description)
+    expect(background[:data][:attributes][:description]).to be_a(String)
     expect(background[:data][:attributes]).to have_key(:image_url)
+    expect(background[:data][:attributes][:image_url]).to be_a(String)
     expect(background[:data][:attributes]).to have_key(:site)
+    expect(background[:data][:attributes][:site]).to be_a(String)
     expect(background[:data][:attributes]).to have_key(:photographer)
+    expect(background[:data][:attributes][:photographer]).to be_a(String)
     expect(background[:data][:attributes]).to have_key(:photographer_site)
+    expect(background[:data][:attributes][:photographer_site]).to be_a(String)
   end
 
   it ' has a sad path' do
