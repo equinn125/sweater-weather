@@ -80,9 +80,9 @@
 
 ### Endpoints
 ## Get weather for a city
-Request: `GET /api/v1/forecast?location=denver,co`
+<p>Request: `GET /api/v1/forecast?location=denver,co`</p>
 
-Response
+<p>Response</p>
 `{
   "data": {
     "id": null,
@@ -111,6 +111,7 @@ Response
       ]
     }
   }
-}
+}`
+
 
 
