@@ -148,6 +148,7 @@
 
 ```
 </details>
+
 <details>
   <summary>Register a user</summary>
   
@@ -183,3 +184,85 @@
 
 ```
 </details>
+
+<details>
+  <summary>Login a user</summary>
+  
+  * Method: POST
+ 
+  * Endpoint: /api/v1/sessions
+  
+  * Request Body:
+```
+  
+ {
+  "email": "whatever@example.com",
+  "password": "password"
+}
+  
+```
+  
+ *Response
+  
+```
+{
+    "data": {
+        "id": "45",
+        "type": "users",
+        "attributes": {
+            "email": "whatever@example.com",
+            "api_key": "kCtjfplyAsJUoQiWNgudiAtt"
+        }
+    }
+}
+
+
+```
+</details>
+
+<details>
+  <summary>Roadtrip</summary>
+  
+  * Method: POST
+ 
+  * Endpoint: /api/v1/road_trip
+  
+  * Request Body:
+```
+  
+ {
+  "origin": "Denver,CO",
+  "destination": "Pueblo,CO",
+  "api_key": "kCtjfplyAsJUoQiWNgudiAtt"
+}
+  
+```
+  
+ *Response
+  
+```
+{
+    "data": {
+        "id": null,
+        "type": "roadtrip",
+        "attributes": {
+            "start_city": "Denver,CO",
+            "end_city": "Pueblo,CO",
+            "travel_time": "01:45:23",
+            "weather_at_eta": {
+                "temperature": 72.36,
+                "conditions": "few clouds"
+            }
+        }
+    }
+}
+
+
+```
+</details>
+
+### Acknowlegements
+* MapQuestAPI
+* OpenWeatherAPI
+* UnSplashAPI
+
