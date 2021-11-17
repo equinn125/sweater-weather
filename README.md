@@ -67,3 +67,18 @@
 - Github: [Erin Quinn](https://github.com/equinn125)
 - LinkedIn:[Erin Quinn](https://www.linkedin.com/in/erin-quinn-a53a8b172/)
 - ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+### Local Setup
+
+1. Fork and Clone the repo
+2. Install gem packages: `bundle install`
+3. Set up the database: `rails db:{drop,create,migrate}`
+4. Run `bundle exec figaro install` to generate a hidden application.yml file for API keys
+5. Collect API keys from the following [MapQuest](https://developer.mapquest.com/documentation/), [OpenWeather](https://openweathermap.org/api), [UnSplash](https://unsplash.com/documentation#creating-a-developer-account)
+6. Input API keys into the `application.yml` file: `map_key: your mapquest api key here, weather_key: your openweather api key here, unsplash_key: your unsplash api key here`
+- ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+### Endpoints
+#Get weather for a city
+Request: `GET /api/v1/forecast?location=denver,co`
+
