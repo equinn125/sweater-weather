@@ -148,3 +148,38 @@
 
 ```
 </details>
+<details>
+  <summary>Register a user</summary>
+  
+  * Method: POST
+ 
+  * Endpoint: /api/v1/users
+  
+  * Request Body:
+```
+  
+  {
+  "email": "whatever@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+  
+```
+  
+ *Response
+  
+```
+{
+    "data": {
+        "id": "45",
+        "type": "users",
+        "attributes": {
+            "email": "whatever@example.com",
+            "api_key": "kCtjfplyAsJUoQiWNgudiAtt"
+        }
+    }
+}
+
+
+```
+</details>
